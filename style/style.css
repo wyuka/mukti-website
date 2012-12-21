@@ -61,10 +61,10 @@ html
 	color: white;
 	position: absolute;
 
-	-webkit-transition: 500ms;
-	-moz-transition: 500ms;
-	-o-transition: 500ms;
-	transition: 500ms;
+	-webkit-transition: opacity 500ms, text-shadow 500ms;
+	-moz-transition: opacity 500ms, text-shadow 500ms;
+	-o-transition: opacity 500ms, text-shadow 500ms;
+	transition: opacity 500ms, text-shadow 500ms;
 }
 
 .linkText:hover

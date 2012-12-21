@@ -16,6 +16,23 @@
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="shortcut icon" href="/favicon.ico" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<script src="js/jquery.min.js"></script>
+		<script>
+            function showChild(text, line, id) {
+                var X = 2 + Math.floor(Math.random() * 80);
+                var Y = line * 10;
+                $('#childNodes').append('<div class="linkText" id="' + id + '" style="left: ' + X + '%; top: ' + Y + '%">' + text + '</div>');
+                var item = $('#' + id);
+                var leftX = item.position().left;
+                console.log(leftX);
+                function animateLink(link) {
+                    link.animate({"left": "+=5%"}, 2000 + Math.floor(Math.random() * 5000), function() {
+                        link.animate({"left": "-=5%"}, 2000 + Math.floor(Math.random() * 5000), function() { animateLink(link); });
+                    });
+                }
+                animateLink(item);
+            };
+        </script>
 
 		<link rel="stylesheet" type="text/css" href="style/style.css">
 	</head>
@@ -32,10 +49,14 @@
             <div style="font-size: 12pt; text-align: center;">Break the Shackles</div>
         </div>
         <div id="childNodes">
-            <div class="linkText" style="left: 20%; top: 25%" onclick="alert('workshops')">Workshops</div>
-            <div class="linkText" style="left: 60%; top: 30%" onclick="alert('talks')">Talks</div>
-            <div class="linkText" style="left: 60%; top: 65%" onclick="alert('programming')">Programming</div>
-            <div class="linkText" style="left: 20%; top: 70%" onclick="alert('masti')">Masti</div>
         </div>
+        <script>
+        $(document).ready( function() {
+            showChild('Workshops', 2, 1);
+            showChild('Talks', 3, 2);
+            showChild('Code', 7, 3);
+            showChild('Masti', 8, 4);
+        });
+        </script>
 	</body>
 </html>
