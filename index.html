@@ -25,12 +25,20 @@
                 var item = $('#' + id);
                 var leftX = item.position().left;
                 console.log(leftX);
-                function animateLink(link) {
-                    link.animate({"left": "+=5%"}, 2000 + Math.floor(Math.random() * 5000), function() {
-                        link.animate({"left": "-=5%"}, 2000 + Math.floor(Math.random() * 5000), function() { animateLink(link); });
-                    });
+                function animateLink(link, right) {
+                    if (right == true) {
+                        link.animate({"left": "2%"}, 30000 + Math.floor(Math.random() * 10000), function() { animateLink(link, false); });
+                    } else {
+                        link.animate({"left": "82%"}, 30000 + Math.floor(Math.random() * 10000), function() { animateLink(link, true); });
+                    }
                 }
-                animateLink(item);
+                if (Math.random() > 0.5) {
+                    animateLink(item, true);
+                }
+                else
+                {
+                    animateLink(item, false);
+                }
             };
         </script>
 
