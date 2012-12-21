@@ -27,9 +27,9 @@
                 console.log(leftX);
                 function animateLink(link, right) {
                     if (right == true) {
-                        link.animate({"left": "2%"}, 30000 + Math.floor(Math.random() * 10000), function() { animateLink(link, false); });
+                        link.animate({"left": "+=2%"}, 2000 + Math.floor(Math.random() * 2000), function() { animateLink(link, false); });
                     } else {
-                        link.animate({"left": "82%"}, 30000 + Math.floor(Math.random() * 10000), function() { animateLink(link, true); });
+                        link.animate({"left": "-=2%"}, 2000 + Math.floor(Math.random() * 2000), function() { animateLink(link, true); });
                     }
                 }
                 if (Math.random() > 0.5) {
