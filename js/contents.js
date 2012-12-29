@@ -14,7 +14,7 @@ muktiObject = {
                     'line': 30,
                     'children' : []
                 }, {
-                	'text': 'Free Software',
+                	'text': 'Mediawiki',
                     'line': 70,
                     'children' : []
                 }, {
@@ -24,14 +24,71 @@ muktiObject = {
                 }
             ]
 		}, {
-			'text': 'Talks',
-            'line': 30
-        }, {
-        	'text': 'Code',
-			'line': 70
+			'text': 'Code',
+            'line': 30,
+            'children': [
+            	{
+                	'text': 'Codecracker',
+                    'line': 20,
+                    'children' : []
+                }, {
+                	'text': 'InCanity',
+                    'line': 30,
+                    'children' : []
+                }, {
+                	'text': 'Behind the Scenes',
+                    'line': 70,
+                    'children' : []
+                }, {
+                	'text': 'Hack the Code',
+                    'line': 80,
+                    'children' : []
+                }
+            ] 
         }, {
         	'text': 'Masti',
-            'line': 80
+			'line': 70,
+			'children': [
+            	{
+                	'text': 'Lipi',
+                    'line': 20,
+                    'children' : []
+                }, {
+                	'text': 'FreePL',
+                    'line': 30,
+                    'children' : []
+                }, {
+                	'text': 'Media Cryptex Booth',
+                    'line': 70,
+                    'children' : []
+                }, {
+                	'text': 'ImaGIMP',
+                    'line': 80,
+                    'children' : []
+                }
+            ]
+        }, {
+        	'text': 'Online',
+            'line': 80,
+            'children': [
+            	{
+                	'text': 'FreePL',
+                    'line': 20,
+                    'children' : []
+                }, {
+                	'text': 'FreeMex',
+                    'line': 30,
+                    'children' : []
+                }, {
+                	'text': 'Online Treasure Hunt',
+                    'line': 70,
+                    'children' : []
+                }, {
+                	'text': 'BrainMesh',
+                    'line': 80,
+                    'children' : []
+                }
+            ]
         }
     ]
 };
