@@ -47,9 +47,11 @@ html
 	opacity: 1;
 	color: white;
 	position: absolute;
-	left: 50%;
+	text-align: center;
 	top: 50%;
-	margin-left: -130px;
+	left: 0px;
+	right: 0px;
+	height: 50%;
 	margin-top: -53px;
 }
 
@@ -60,17 +62,33 @@ html
 	opacity: 0.7;
 	color: white;
 	position: absolute;
+}
 
-	-webkit-transition: opacity 500ms, text-shadow 500ms;
-	-moz-transition: opacity 500ms, text-shadow 500ms;
-	-o-transition: opacity 500ms, text-shadow 500ms;
-	transition: opacity 500ms, text-shadow 500ms;
+.invisible
+{
+	opacity: 0;
 }
 
 .linkText:hover
 {
 	opacity: 1;
 	text-shadow: 0px 0px 10px #fff;
+}
+
+.slowTrans
+{
+	-webkit-transition: opacity 1000ms;
+	-moz-transition: opacity 1000ms;
+	-o-transition: opacity 1000ms;
+	transition: opacity 1000ms;
+}
+
+.fastTrans
+{
+	-webkit-transition: opacity 500ms, text-shadow 500ms;
+	-moz-transition: opacity 500ms, text-shadow 500ms;
+	-o-transition: opacity 500ms, text-shadow 500ms;
+	transition: opacity 500ms, text-shadow 500ms;
 }
 
 .navbar

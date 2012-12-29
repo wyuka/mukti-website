@@ -17,6 +17,7 @@
 		<link rel="shortcut icon" href="/favicon.ico" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 		<script src="js/jquery.min.js"></script>
+		<script src="js/contents.js"></script>
 		<script src="js/main.js"></script>
 
 		<link rel="stylesheet" type="text/css" href="style/style.css">
@@ -28,7 +29,7 @@
 	            <li>H</li>
 	        </ul>
 	    </div-->
-        <div id="parentNode" class="bannerText" onclick="alert('mukti')">
+        <div id="parentNode" class="bannerText slowTrans" onclick="alert('mukti')">
             <!--div style="font-size: 12pt; text-align: center; line-height: 12pt">February 2-4</div-->
             Mukti 13
             <div style="font-size: 12pt; text-align: center;">Break the Shackles</div>
@@ -37,10 +38,8 @@
         </div>
         <script>
         $(document).ready( function() {
-            showChild('Workshops', 2, 1, true);
-            showChild('Talks', 3, 2, false);
-            showChild('Code', 7, 3, true);
-            showChild('Masti', 8, 4, false);
+            currentObject = muktiObject;
+            drawChildren();
         });
         </script>
 	</body>
