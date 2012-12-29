@@ -32,26 +32,25 @@ function showChild(text, Y, id, leftSide) {
 	}
 }
 
-var muktiObject, currentObject;
+var currentObject;
 
-function drawChildren () {
-	var object = currentObject;
-	for (var childNum = 0; childNum < object.children.length; childNum++) {
-		childText = object.children[childNum].text;
-		var onLeft, childLine;
-		if (childNum % 2)
-			onLeft = true;
-		else
+function drawChildren() {
+	var item = currentObject;
+	var onLeft = false;
+	for (childKey in item.children) {
+		childText = contents[childKey].text;
+		childLine = item.children[childKey];
+		if (onLeft == true)
 			onLeft = false;
-		childLine = object.children[childNum].line;
-
-		showChild(childText, childLine, childNum, onLeft);
+		else
+			onLeft = true;
+		showChild(childText, childLine, childKey, onLeft);
 	}
 }
 
 function clickedOn(child) {
 	console.log(child);
-	var item = currentObject.children[child];
+	var item = contents[child];
 	console.log(JSON.stringify(item));
 	currentObject = item;
 	eraseParent();
