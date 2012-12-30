@@ -3,9 +3,9 @@ var slowTransSpeed = 1000;
 function showChild(text, Y, id, leftSide) {
 	var X;
     if (leftSide == true) {
-    	X = 2 + Math.floor(Math.random() * 43);
+    	X = 2 + Math.floor(Math.random() * 37);
 	} else {
-		X = 45 + Math.floor(Math.random() * 35);
+		X = 55 + Math.floor(Math.random() * 25);
 	}
 	$('#childNodes').append('<div class="linkText slowTrans invisible" id="' + id + '" style="left: ' + X + '%; top: ' + Y + '%" onclick="console.log(JSON.stringify(currentObject)); clickedOn(\'' + id + '\')">' + text + '</div>');
 	var item = $('#' + id);
