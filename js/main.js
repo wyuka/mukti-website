@@ -1,13 +1,14 @@
 function showChild(text, Y, id, leftSide) {
-	var X;
+	var X, width;
+	width = $('#parentNode').width();
     if (leftSide == true) {
-    	X = 2 + Math.floor(Math.random() * 37);
+    	X = Math.floor(50 + Math.random() * (width / 2 - 260));
 	} else {
-		X = 55 + Math.floor(Math.random() * 25);
+		X = Math.floor(width / 2 + 30 + Math.random() * (width / 2 - 420));
 	}
-	$('#childNodes').append('<div class="linkText invisible" id="' + id + '" style="left: ' + X + '%; top: ' + Y + '%" onclick="console.log(JSON.stringify(currentObject)); clickedOn(\'' + id + '\')">' + text + '</div>');
+	$('#childNodes').append('<div class="linkText invisible" id="' + id + '" style="left: ' + X + 'px; top: ' + Y + '%" onclick="console.log(JSON.stringify(currentObject)); clickedOn(\'' + id + '\')">' + text + '</div>');
 	var item = $('#' + id);
-	
+
 	var speed = getRandomSpeed();
 	setTransSpeed(item, speed + 'ms');
 	setTimeout(function() {
@@ -20,9 +21,9 @@ function showChild(text, Y, id, leftSide) {
 	console.log(leftX);
 	function animateLink(link, right) {
 		if (right == true) {
-			link.animate({"left": "+=2%"}, 2000 + Math.floor(Math.random() * 2000), function() { animateLink(link, false); });
+			link.animate({"left": "+=25px"}, 2000 + Math.floor(Math.random() * 2000), function() { animateLink(link, false); });
 		} else {
-			link.animate({"left": "-=2%"}, 2000 + Math.floor(Math.random() * 2000), function() { animateLink(link, true); });
+			link.animate({"left": "-=25px"}, 2000 + Math.floor(Math.random() * 2000), function() { animateLink(link, true); });
 		}
 	}
 	if (Math.random() > 0.5) {
