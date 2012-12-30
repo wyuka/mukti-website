@@ -11,8 +11,6 @@
 		<meta name="description" content="Mukti 13, The Annual Free Software Symposium of NIT Durgapur" />
 		<meta name="author" content="Tirtha Chatterjee" />
 
-		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
-
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="shortcut icon" href="/favicon.ico" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -29,7 +27,7 @@
 	            <li>H</li>
 	        </ul>
 	    </div-->
-        <div id="parentNode" class="bannerText slowTrans" onclick="alert('mukti')">
+        <div id="parentNode" class="bannerText invisible" onclick="alert('mukti')">
             <!--div style="font-size: 12pt; text-align: center; line-height: 12pt">February 2-4</div-->
             Mukti 13
             <div style="font-size: 12pt; text-align: center;">Break the Shackles</div>
@@ -40,6 +38,9 @@
         $(document).ready( function() {
             currentObject = contents['mukti'];
             drawChildren();
+            setTimeout(function (){
+                $('#parentNode').removeClass('invisible');
+            }, 10);
         });
         </script>
 	</body>

@@ -1,5 +1,3 @@
-var slowTransSpeed = 1000;
-
 function showChild(text, Y, id, leftSide) {
 	var X;
     if (leftSide == true) {
@@ -7,15 +5,17 @@ function showChild(text, Y, id, leftSide) {
 	} else {
 		X = 55 + Math.floor(Math.random() * 25);
 	}
-	$('#childNodes').append('<div class="linkText slowTrans invisible" id="' + id + '" style="left: ' + X + '%; top: ' + Y + '%" onclick="console.log(JSON.stringify(currentObject)); clickedOn(\'' + id + '\')">' + text + '</div>');
+	$('#childNodes').append('<div class="linkText invisible" id="' + id + '" style="left: ' + X + '%; top: ' + Y + '%" onclick="console.log(JSON.stringify(currentObject)); clickedOn(\'' + id + '\')">' + text + '</div>');
 	var item = $('#' + id);
+	
+	var speed = getRandomSpeed();
+	setTransSpeed(item, speed + 'ms');
 	setTimeout(function() {
 		item.removeClass('invisible');
 	}, 0)
 	setTimeout(function() {
-		item.removeClass('slowTrans');
-		item.addClass('fastTrans');
-	}, slowTransSpeed);
+		setTransNormal(item);
+	}, speed);
 	var leftX = item.position().left;
 	console.log(leftX);
 	function animateLink(link, right) {
@@ -48,25 +48,33 @@ function drawChildren() {
 	}
 }
 
+function getRandomSpeed() {
+	return (50 + Math.floor(Math.random() * 950));
+}
+
 function clickedOn(child) {
 	console.log(child);
 	var item = contents[child];
 	console.log(JSON.stringify(item));
 	currentObject = item;
-	eraseParent();
 	eraseChildren();
+	eraseParent();
 }
 
 function eraseParent() {
 	$('#parentNode').css('opacity', 0);
-	setTimeout(drawParent, slowTransSpeed);
 }
+
 function eraseChildren() {
-	$('.linkText').removeClass('fastTrans');
-	$('.linkText').addClass('slowTrans');
-	$('.linkText').css('opacity', 0);
-	setTimeout(removeChildren, slowTransSpeed);
-	
+	var maxSpeed = 0;
+	$('.linkText').each(function() {
+		var speed = getRandomSpeed();
+		maxSpeed = Math.max(maxSpeed, speed);
+		setTransSpeed($(this), speed + 'ms');
+		$(this).css('opacity', 0);
+	});
+	console.log(maxSpeed);
+	setTimeout(removeChildren, maxSpeed + 1);
 }
 
 function drawParent() {
@@ -76,5 +84,20 @@ function drawParent() {
 }
 function removeChildren() {
 	$('.linkText').remove();
+	drawParent();
 	drawChildren();
+}
+
+function setTransSpeed(item, speed) {
+	item.css('transition', 'opacity ' + speed);
+	item.css('-moz-transition', 'opacity ' + speed);
+	item.css('-webkit-transition', 'opacity ' + speed);
+	item.css('-o-transition', 'opacity ' + speed);
+}
+
+function setTransNormal(item) {
+	item.css('transition', 'text-shadow 500ms, opacity 500ms');
+	item.css('-moz-transition', 'text-shadow 500ms, opacity 500ms');
+	item.css('-webkit-transition', 'text-shadow 500ms, opacity 500ms');
+	item.css('-o-transition', 'text-shadow 500ms, opacity 500ms');
 }
