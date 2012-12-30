@@ -50,7 +50,7 @@ function drawChildren() {
 }
 
 function getRandomSpeed() {
-	return (50 + Math.floor(Math.random() * 950));
+	return (100 + 400 * Math.floor(Math.random() * 3));
 }
 
 function clickedOn(child) {
