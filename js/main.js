@@ -4,7 +4,7 @@ function showChild(text, Y, id, leftSide) {
     if (leftSide == true) {
     	X = Math.floor(50 + Math.random() * (width / 2 - 260));
 	} else {
-		X = Math.floor(width / 2 + 30 + Math.random() * (width / 2 - 420));
+		X = Math.floor(width / 2 + 60 + Math.random() * (width / 2 - 420));
 	}
 	$('#childNodes').append('<div class="linkText invisible" id="' + id + '" style="left: ' + X + 'px; top: ' + Y + '%"">' + text + '</div>');
 	var item = $('#' + id);
