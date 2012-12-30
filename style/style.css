@@ -54,10 +54,10 @@ html
 	height: 50%;
 	margin-top: -53px;
 
-	-webkit-transition: opacity 1000ms;
-	-moz-transition: opacity 1000ms;
-	-o-transition: opacity 1000ms;
-	transition: opacity 1000ms;
+	-webkit-transition: opacity 700ms;
+	-moz-transition: opacity 700ms;
+	-o-transition: opacity 700ms;
+	transition: opacity 700ms;
 }
 
 .linkText
@@ -67,6 +67,11 @@ html
 	opacity: 0.7;
 	color: white;
 	position: absolute;
+
+	transition: text-shadow 500ms, opacity 500ms;
+	-moz-transition: text-shadow 500ms, opacity 500ms;
+	-webkit-transition: text-shadow 500ms, opacity 500ms;
+	-o-transition: text-shadow 500ms, opacity 500ms;
 }
 
 .invisible
