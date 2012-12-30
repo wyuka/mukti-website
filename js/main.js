@@ -31,7 +31,7 @@ function showChild(text, Y, id, leftSide) {
 	}
 }
 
-var currentObject;
+var currentObject, contents;
 
 function drawChildren() {
 	var item = currentObject;
@@ -77,10 +77,13 @@ function removeChildren() {
 
 function bootstrap() {
 	$(document).ready( function() {
-    	currentObject = contents['mukti'];
-		drawChildren();
-        setTimeout(function (){
-        	$('#parentNode').removeClass('invisible');
-        }, 10);
+		$.getJSON('js/contents.json', function(data) {
+    		contents = data;
+    		currentObject = contents['mukti'];
+			drawChildren();
+	        setTimeout(function (){
+	        	$('#parentNode').removeClass('invisible');
+	        }, 10);
+    	});
     });
 }
