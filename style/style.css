@@ -6,6 +6,20 @@
 }
 
 @font-face {
+  font-family: 'Monda Regular';
+  src: url('Monda-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Monda Bold';
+  src: url('Monda-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Lato Light';
   src: url('Lato-Lig-webfont.ttf') format('truetype');
   font-weight: normal;
@@ -40,11 +54,10 @@ html
 	opacity: 1;
 }
 
-.bannerText
+#parent
 {
 	font: 48pt 'Paytone One';
 	line-height: 40pt;
-	opacity: 1;
 	color: white;
 	position: absolute;
 	text-align: center;
@@ -53,6 +66,7 @@ html
 	right: 0px;
 	height: 50%;
 	margin-top: -53px;
+	z-index: -1;
 
 	-webkit-transition: opacity 700ms;
 	-moz-transition: opacity 700ms;
@@ -93,4 +107,44 @@ html
 	padding: 0px 5px;
 	border: 1px;
     border-style: solid;
+}
+
+#dummydiv
+{
+	display: inline-block;
+	position: relative;
+	left: 50%;
+	top: 0px;
+}
+
+#contents
+{
+	width: 600px;
+	margin-left: -50%;
+	margin-right: -50%;
+	z-index: 2;
+}
+
+#contentTitle
+{
+	position: relative;
+	width: 100%;
+	text-align: center;
+	font: 48px 'Paytone One';
+	line-height: 100px;
+	color: white;
+}
+
+#contentBodyWrapper
+{
+	height: 450px;
+	overflow-y: auto;
+}
+
+#contentBody
+{
+	font: 20px 'Monda Regular';
+	line-height: 20px;
+	color: white;
+	text-align: justify;
 }

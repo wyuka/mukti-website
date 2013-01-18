@@ -15,9 +15,13 @@
 		<link rel="shortcut icon" href="/favicon.ico" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery-ui-1.8.23.custom.min.js"></script>
+		<script src="js/jquery.mousewheel.min.js"></script>
+		<script src="js/jquery.mCustomScrollbar.js"></script>
 		<script src="js/main.js"></script>
 
 		<link rel="stylesheet" type="text/css" href="style/style.css">
+		<link rel="stylesheet" type="text/css" href="style/jquery.mCustomScrollbar.css" />
 	</head>
 
 	<body>
@@ -26,12 +30,18 @@
 	            <li>H</li>
 	        </ul>
 	    </div-->
-        <div id="parentNode" class="bannerText invisible">
-            <!--div style="font-size: 12pt; text-align: center; line-height: 12pt">February 2-4</div-->
-            Mukti 13
-            <div style="font-size: 12pt; text-align: center;">Break the Shackles</div>
+	    <div id="parent" class="invisible">
+            <div id="parentNode" class="bannerText">
+            </div>
+            <div id="subparent" class="bannerText" style="font-size: 12pt; text-align: center;">&nbsp;</div>
         </div>
         <div id="childNodes">
+        </div>
+        <div id="dummydiv">
+            <div id="contents">
+                <div id="contentTitle">&nbsp;</div>
+                <div id="contentBodyWrapper" class="content_3"><div id="contentBody">a<br/>a<br/>a<br/>a<br/>a<br/>a<br/>a<br/>a<br/>a<br/>a<br/>a<br/>a<br/>a<br/>a<br/>a<br/>a<br/>a<br/>a<br/>a<br/>a<br/>a<br/>a<br/>a<br/>a<br/>a<br/>a<br/>a<br/>a<br/>a<br/>&nbsp;</div></div>
+            </div>
         </div>
         <script>
         bootstrap();

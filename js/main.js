@@ -56,7 +56,7 @@ function clickedOn(child) {
 }
 
 function eraseParent() {
-	$('#parentNode').css('opacity', 0);
+	$('#parent').addClass('invisible');
 }
 
 function eraseChildren() {
@@ -67,23 +67,40 @@ function eraseChildren() {
 function drawParent() {
 	parentNode = $('#parentNode');
 	parentNode.html(currentObject.text);
-	parentNode.css('opacity', 1);
+
+	subParent = $('#subparent');
+	if (currentObject.subtext != null) {
+		subParent.html(currentObject.subtext);
+	}
+	else {
+		subParent.html('');
+	}
+	$("#parent").removeClass('invisible');
 }
 function removeChildren() {
 	$('.linkText').remove();
-	drawParent();
-	drawChildren();
+	console.log(currentObject.contents);
+	if (currentObject.contents == null || currentObject.contents == '') {
+		drawParent();
+		drawChildren();
+	}
+	else {
+		$('#contentTitle').html(currentObject.text);
+		$('#contentBody').html(currentObject.contents);
+		$('#contents').show();
+		$('#contentBodyWrapper').mCustomScrollbar('update');
+	}
 }
 
 function bootstrap() {
-	$(document).ready( function() {
+	$(window).load( function() {
 		$.getJSON('js/contents.json', function(data) {
     		contents = data;
     		currentObject = contents['mukti'];
+    		drawParent();
 			drawChildren();
-	        setTimeout(function (){
-	        	$('#parentNode').removeClass('invisible');
-	        }, 10);
     	});
+    	$("#contentBodyWrapper").mCustomScrollbar({advanced: {autoScrollOnFocus: true}, autoDraggerLength:true});
+    	$("#contents").hide();
     });
 }

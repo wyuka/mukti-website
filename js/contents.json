@@ -1,10 +1,12 @@
 {
 	"mukti": {
-		"text": "Mukti",
+		"text": "Mukti 13",
+		"subtext": "Break the Shackles",
 		"children": {"workshops": 20, "code": 30, "masti": 70, "online": 80}
 	},
 	"workshops": {
 		"text": "Workshops",
+		"subtext": "Learn to Code",
 		"children": {"python": 20, "webdev": 30, "gsocbarcamp": 70, "mediawiki": 80}
 	},
 	"python": {
@@ -37,7 +39,8 @@
 	},
 	"mcb": {
 		"text": "Media Cryptex Booth",
-		"children": {}
+		"children": {},
+		"contents": "<p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p>"
 	},
 	"imagimp": {
 		"text": "ImaGIMP",
@@ -77,7 +80,8 @@
 	},
 	"hackthecode": {
 		"text": "Hack the Code",
-		"children": {}
+		"children": {},
+		"contents": "<p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p><p>I have never used either, so let me know if the included SCSS or SASS files have issues.</p>"
 	},
 	"behindthescenes": {
 		"text": "Behind the Scenes",
